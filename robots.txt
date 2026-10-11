@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://askfalt.se/sitemap.xml

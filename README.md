@@ -1,33 +1,41 @@
-# Askfält – officiell webbplats
+# Askfält – officiell webbplats (v1.0)
 
-Publik, tvåspråkig informations- och promotionswebbplats för Askfält.
+Publik, tvåspråkig marknadsföringswebbplats för Askfält. Statisk HTML/CSS/JS utan byggsteg, ramverk eller externa beroenden.
 
 - Produktionsdomän: **https://askfalt.se**
-- Svenska: `/`; engelska: `/en/`
-- Policy: `/privacy/`, `/en/privacy/`
-- Support: `/support/`, `/en/support/`
-- Information/villkor: `/terms/`, `/en/terms/`
-- Spel: web/PWA nu, iOS App Store **planerad** 1 november 2026.
+- Svenska: `/` · Engelska: `/en/`
+- Undersidor: `/support/`, `/privacy/`, `/terms/`, `/license/` (+ `/en/…`)
+- Spel: webb/PWA nu, iOS **planerad** 1 november 2026 (mål, inte löfte).
 
-## Publicera
-GitHub Pages → Deploy from branch → `main` → `/(root)`; custom domain `askfalt.se`.
-DNS A-records på apex mot GitHub Pages och CNAME `www` → `patrikbichis.github.io`.
-`CNAME` ligger i repo-roten för att bevara domänkonfigurationen.
+## Struktur
+```
+index.html, en/index.html      Startsidor (A–J: hero, värld, tidslinje, koloni, dygn, försvar, återta, galleri, video, spela)
+support|privacy|terms|license/ Undersidor, speglas under en/
+style.css                      Hela designsystemet (färger, typografi, knappar, sektioner)
+main.js                        Meny, scroll-avslöjanden, parallax, askpartiklar, tidslinje, dag/natt, bildvisning, lazy video
+404.html                       Felsida (rotabsoluta sökvägar)
+site.webmanifest, robots.txt, sitemap.xml, .well-known/security.txt
+assets/                        Spelbilder (WebP), ikoner, og-image.jpg
+docs/BILDLISTA.md              Önskat kompletterande bildmaterial
+docs/COMMIT.md                 Kommandon för commit/PR
+```
 
-**Merga inte utkastet utan granskning.** PR från `feature/website-v0.1`.
+## Vanliga ändringar
+- **Spellänk:** byt `https://real-super-duper-game.vercel.app/` mot `https://game.askfalt.se/` i alla HTML-filer (sök/ersätt) när den nya domänen är live.
+- **Video:** se kommentaren i `#video` i `index.html` och `en/index.html`. Lägg `askfalt-gameplay.webm`/`.mp4` i `assets/video/`, ersätt figuren med `<video>`-blocket och ta bort ”kommer”-skylten. Källorna laddas först när videon syns; ljud är av och `playsinline` är satt.
+- **iOS-lansering:** visa App Store-knapp först när appen är publicerad (se AGENTS.md).
 
 ## Bilder
-Godkända screenshots från spelet kan läggas under `assets/` i publika repot:
-- `hero.webp` – splash i liggande format
-- `colony-evening.webp`, `colony-night.webp`
-- `gameplay-mobile.webp`
+Härledda bilder (beskurna från originalen, HUD borttagen där det behövs):
+`hero-wide` (splash utan logotyp/laddningsrad), `story-net-art`, `story-colony-art`, `menu-village`, `roads-clean`, `evening-clean`, `night-clean`. Galleriet visar originalen med HUD.
 
-Dela enbart publicerbara bilder, aldrig privat källkod eller credentials. Grafikleveransen och visuell integration görs separat.
+## Publicera
+GitHub Pages → Deploy from branch → `main` → `/(root)`; custom domain `askfalt.se`. `CNAME` och `.nojekyll` ligger i roten (`.nojekyll` krävs för `.well-known/`).
 
 ## Kontroll före App Store
-Integritetspolicyn är ett preliminärt utkast. Verifiera den mot slutligt Capacitor-bygge och externa SDK:er.
-Ange en riktig publik supportadress innan produktionslansering. Kontrollera att GitHub Issues är aktiverat för att nuvarande supportlänk ska fungera.
-Inga löften om multiplayer förrän funktionen släppts.
+- Integritetspolicyn beskriver webbversionen (lokal lagring, inget konto). Stäm av mot slutligt Capacitor-bygge och eventuella SDK:er.
+- Säkerställ att `security@askfalt.se` tar emot e-post.
+- Inga löften om multiplayer förrän funktionen släppts.
 
 ## Lokal testning
-Statisk HTML/CSS. Kör `python -m http.server 8000` och besök `http://localhost:8000/`.
+`python -m http.server 8000` → `http://localhost:8000/`. Testa 1920×1080, 1366×768, 390 px och 360 px, samt `prefers-reduced-motion`.

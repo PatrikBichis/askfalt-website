@@ -1,0 +1,5 @@
+Contact: mailto:security@askfalt.se
+Expires: 2027-10-11T00:00:00.000Z
+Preferred-Languages: sv, en
+Canonical: https://askfalt.se/.well-known/security.txt
+Policy: https://askfalt.se/en/support/
