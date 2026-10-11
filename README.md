@@ -22,6 +22,7 @@ docs/COMMIT.md                 Kommandon för commit/PR
 ```
 
 ## Vanliga ändringar
+- **CSS eller JS ändrad:** byt versionsparametern `?v=ÅÅÅÅ-MM-DD` på `style.css` och `main.js` i alla HTML-filer (sök/ersätt). GitHub Pages cachar filerna i 10 minuter och webbläsare längre, så utan ny parameter kan nya sidor visas utan stil.
 - **Ny spelversion eller ändrad plan:** uppdatera `/devlog/` och `/roadmap/` (sv + en) enligt *Hålla webbplatsen i synk med spelet* i `AGENTS.md`. Varje post i devloggen är ett `<li>` i `ol.log` med `.meta` (tag `live`/`wip`/`beta`/`plan`, `<time>`, version), rubrik och 1–3 punkter.
 - **Spellänk:** byt `http://game.askfalt.se/` mot `https://game.askfalt.se/` i alla HTML-filer (sök/ersätt) när den nya domänen är live.
 - **Video:** se kommentaren i `#video` i `index.html` och `en/index.html`. Lägg `askfalt-gameplay.webm`/`.mp4` i `assets/video/`, ersätt figuren med `<video>`-blocket och ta bort ”kommer”-skylten. Källorna laddas först när videon syns; ljud är av och `playsinline` är satt.
