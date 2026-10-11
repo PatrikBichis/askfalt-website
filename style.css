@@ -13,3 +13,13 @@
 .shot figcaption{padding:12px 15px;color:#eac09b;font-size:14px}
 @media(max-width:750px){.gallery{grid-template-columns:1fr}.shot-art{height:190px}}
 @media(prefers-reduced-motion:reduce){.ash{animation:none}html{scroll-behavior:auto}}
+
+/* Askfält artwork – requires matching files in /assets/ */
+.hero-art{background:linear-gradient(90deg,#10131be9 0%,#111319b5 44%,#11131950 100%),url('/assets/hero.webp') center 44%/cover no-repeat;opacity:1}
+.shot-art.evening{background:url('/assets/evening.webp') center/cover no-repeat}
+.shot-art.night{background:url('/assets/night.webp') center/cover no-repeat}
+.shot-art.mobile{background:url('/assets/gameplay.webp') center/cover no-repeat}
+.shot-art:after{display:none}
+.shot-art{image-rendering:auto;transition:transform .35s ease}
+.shot:hover .shot-art{transform:scale(1.04)}
+@media(prefers-reduced-motion:reduce){.shot-art{transition:none}}
