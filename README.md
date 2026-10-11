@@ -21,7 +21,7 @@ docs/COMMIT.md                 Kommandon för commit/PR
 ```
 
 ## Vanliga ändringar
-- **Spellänk:** byt `https://real-super-duper-game.vercel.app/` mot `https://game.askfalt.se/` i alla HTML-filer (sök/ersätt) när den nya domänen är live.
+- **Spellänk:** byt `http://game.askfalt.se/` mot `https://game.askfalt.se/` i alla HTML-filer (sök/ersätt) när den nya domänen är live.
 - **Video:** se kommentaren i `#video` i `index.html` och `en/index.html`. Lägg `askfalt-gameplay.webm`/`.mp4` i `assets/video/`, ersätt figuren med `<video>`-blocket och ta bort ”kommer”-skylten. Källorna laddas först när videon syns; ljud är av och `playsinline` är satt.
 - **iOS-lansering:** visa App Store-knapp först när appen är publicerad (se AGENTS.md).
 
