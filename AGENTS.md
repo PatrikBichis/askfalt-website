@@ -8,6 +8,7 @@
 - Review privacy policy against actual web/Capacitor releases before app submission; privacy, legal identity and contact must be confirmed by owner.
 - Avoid third-party trackers, unnecessary cookies or external scripts.
 - All changes go through feature branch and PR. No merge without explicit approval.
+- Verify changes locally before push: check affected Swedish/English pages in mobile and desktop sizes and run any applicable local checks. Test suites must not run in GitHub Actions; keep GitHub Pages publishing as a separate deployment flow.
 
 ## Hålla webbplatsen i synk med spelet
 
