@@ -5,7 +5,7 @@ Publik, tvåspråkig marknadsföringswebbplats för Askfält. Statisk HTML/CSS/J
 - Produktionsdomän: **https://askfalt.se**
 - Svenska: `/` · Engelska: `/en/`
 - Undersidor: `/devlog/`, `/roadmap/`, `/support/`, `/privacy/`, `/terms/`, `/license/` (+ `/en/…`)
-- Spel: webb/PWA nu, iOS **planerad** 1 november 2026 (mål, inte löfte).
+- Spel: webb/PWA nu, iOS 2.9.0-beta.2 i intern TestFlight; App Store-publicering planeras efter testning och Apples granskning.
 
 ## Struktur
 ```
