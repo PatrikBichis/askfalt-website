@@ -3,7 +3,7 @@
 - Public GitHub Pages website. Never copy private game source, credentials, secrets or internal plans into this repository.
 - Swedish is default; English is served from /en/. Keep copy meaning aligned.
 - Main site routes: /, /en/, /devlog/, /en/devlog/, /roadmap/, /en/roadmap/, /privacy/, /en/privacy/, /support/, /en/support/, /terms/, /en/terms/.
-- The iOS release is **planned** for 2026-11-01, not already available. Update only after verified publication.
+- iOS 2.9.0-beta.2 is available to internal TestFlight testers. Public App Store release remains planned after testing and Apple's review; update public availability only after verified publication.
 - Game currently exists as web/PWA; multiplayer is future functionality. Never claim future capabilities are shipped.
 - Review privacy policy against actual web/Capacitor releases before app submission; privacy, legal identity and contact must be confirmed by owner.
 - Avoid third-party trackers, unnecessary cookies or external scripts.
